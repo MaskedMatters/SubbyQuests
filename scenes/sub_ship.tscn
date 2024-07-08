@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccae63ayyv7mt"]
+
+[ext_resource type="Texture2D" uid="uid://cmobmwkbsmarr" path="res://assets/sprites/subShip-v2.png" id="1_xdfuf"]
+
+[node name="SubShip" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -16)
+texture = ExtResource("1_xdfuf")
+region_enabled = true
+region_rect = Rect2(0, 130, 256, 52)

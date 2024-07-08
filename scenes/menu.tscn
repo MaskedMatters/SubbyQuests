@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://bm5jgwg5v81qw"]
+
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_qysp4"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qysp4")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="NewSave" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "NEW SAVE"
+
+[node name="LoadSave" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "LOAD SAVE"
+
+[node name="OptionsSettings" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "OPTIONS AND SETTINGS"
+
+[node name="SaveQuit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "SAVE AND QUIT"
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="PreviewText1" type="Label" parent="Labels"]
+offset_left = 88.0
+offset_top = 252.0
+offset_right = 514.0
+offset_bottom = 389.0
+theme_override_font_sizes/font_size = 100
+text = "PREVIEW"
+
+[node name="PreviewText2" type="Label" parent="Labels"]
+offset_left = 184.0
+offset_top = 396.0
+offset_right = 1068.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 32
+text = "Some buttons, features, etc., may not work as intended..."
+
+[node name="PreviewText3" type="Label" parent="Labels"]
+offset_left = 584.0
+offset_top = 450.0
+offset_right = 950.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 21
+text = "(and yes, I know this looks terrible...)"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/NewSave" to="." method="_on_new_save_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/LoadSave" to="." method="_on_load_save_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/OptionsSettings" to="." method="_on_options_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/SaveQuit" to="." method="_on_save_quit_pressed"]
