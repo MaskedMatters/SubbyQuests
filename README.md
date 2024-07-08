@@ -9,6 +9,6 @@ This will let you play the game in the browser, you can also download the game o
 
 #### Credits
 
-**Programmed by Matthew West, using the Godot Engine 4.0 for the project.**
-**Pixel Art by Sebastian Pinnow, using the Aseprite tool.**
+**Programmed by Matthew West, using the Godot Engine 4.0 for the project.**<br>
+**Pixel Art by Sebastian Pinnow, using the Aseprite tool.**<br>
 Pixel Art by ____________, who made the fish pixel art.
