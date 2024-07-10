@@ -1,0 +1,124 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmuvieruut4yr"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_nvinc"]
+[ext_resource type="PackedScene" uid="uid://c7i3g2d5v4t58" path="res://scenes/background.tscn" id="2_jktkx"]
+[ext_resource type="FontFile" uid="uid://dhcx8bdo4g8cm" path="res://assets/fonts/Sabo-Regular.otf" id="2_mgue1"]
+[ext_resource type="FontFile" uid="uid://dtnpc346vtomg" path="res://assets/fonts/Sabo-Filled.otf" id="3_1086n"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nvinc")
+
+[node name="Background" parent="." instance=ExtResource("2_jktkx")]
+layout_mode = 0
+
+[node name="Labels" type="Node" parent="."]
+
+[node name="Title" type="Label" parent="Labels"]
+offset_left = 35.0
+offset_top = 35.0
+offset_right = 710.0
+offset_bottom = 83.0
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "SUBMERSIBLE - THE REMAKE"
+
+[node name="Programmer" type="Label" parent="Labels"]
+offset_left = 38.0
+offset_top = 87.0
+offset_right = 821.0
+offset_bottom = 135.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Programmed By: Matthew West"
+
+[node name="PixelArtist" type="Label" parent="Labels"]
+offset_left = 38.0
+offset_top = 107.0
+offset_right = 839.0
+offset_bottom = 155.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Pixel Art By: Sebastian Pinnow"
+
+[node name="Version" type="Label" parent="Labels"]
+offset_left = 38.0
+offset_top = 682.0
+offset_right = 839.0
+offset_bottom = 730.0
+scale = Vector2(0.2, 0.2)
+theme_override_fonts/font = ExtResource("3_1086n")
+theme_override_font_sizes/font_size = 40
+text = "v0.1.0 - Alpha `PREVIEW`"
+
+[node name="Buttons" type="Node" parent="."]
+
+[node name="NewGame" type="Button" parent="Buttons"]
+offset_left = 38.0
+offset_top = 275.0
+offset_right = 280.0
+offset_bottom = 331.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "New Game
+"
+flat = true
+
+[node name="LoadGame" type="Button" parent="Buttons"]
+offset_left = 38.0
+offset_top = 315.0
+offset_right = 304.0
+offset_bottom = 371.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Load Game
+"
+flat = true
+
+[node name="SaveGame" type="Button" parent="Buttons"]
+offset_left = 38.0
+offset_top = 355.0
+offset_right = 307.0
+offset_bottom = 411.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Save Game"
+flat = true
+
+[node name="Settings" type="Button" parent="Buttons"]
+offset_left = 38.0
+offset_top = 395.0
+offset_right = 277.0
+offset_bottom = 451.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+flat = true
+
+[node name="Quit" type="Button" parent="Buttons"]
+offset_left = 38.0
+offset_top = 435.0
+offset_right = 154.0
+offset_bottom = 491.0
+scale = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("2_mgue1")
+theme_override_font_sizes/font_size = 40
+text = "Quit
+"
+flat = true
+
+[connection signal="pressed" from="Buttons/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Buttons/LoadGame" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="Buttons/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Buttons/Quit" to="." method="_on_quit_pressed"]

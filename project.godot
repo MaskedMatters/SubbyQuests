@@ -10,19 +10,19 @@ config_version=5
 
 [application]
 
-config/name="Subby Quests"
-run/main_scene="res://scenes/menu.tscn"
+config/name="SubmersibleRemake"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 
-Music="*res://scenes/music.tscn"
+MenuMusic="*res://scenes/menu_music.tscn"
 
 [display]
 
-window/size/mode=2
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
-window/stretch/aspect="keep_height"
 
 [rendering]
 
